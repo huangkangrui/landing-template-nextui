@@ -43,25 +43,9 @@ export const Hero = () => {
                         display: 'inline',
                      }}
                   >
-                     The modern landing page{' '}
+                     全国高端外围
                   </Text>
-                  <Text
-                     h1
-                     css={{
-                        display: 'inline',
-                     }}
-                  >
-                     for{' '}
-                  </Text>
-                  <Text
-                     h1
-                     css={{
-                        display: 'inline',
-                     }}
-                     color="primary"
-                  >
-                     React developers
-                  </Text>
+                 
                </Box>
 
                <Text
