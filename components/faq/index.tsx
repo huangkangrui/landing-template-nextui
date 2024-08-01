@@ -16,22 +16,7 @@ export const Faq = () => {
             direction={'column'}
          >
             <Flex align={'center'} direction={'column'}>
-               <Text span css={{color: '$blue600'}}>
-                  FAQ
-               </Text>
-               <Text h2>You Have Questions?</Text>
-               <Text
-                  span
-                  css={{
-                     maxWidth: '700px',
-                     color: '$accents8',
-                     textAlign: 'center',
-                  }}
-               >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  condimentum, nisl ut aliquam lacinia, nisl nisl aliquet
-                  aliquet
-               </Text>
+               <Text h2>服务流程</Text>
             </Flex>
 
             <Flex
@@ -43,143 +28,54 @@ export const Faq = () => {
                }}
                direction={'column'}
             >
-               <Flex css={{gap: '$5'}} justify={'center'}>
+               <Flex css={{gap: '$5'}} justify={'start'}>
                   <BoxIcon />
                   <Flex direction={'column'} css={{gap: '$3'}}>
                      <Text h3>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit?
-                     </Text>
-                     <Text
-                        span
-                        css={{
-                           color: '$accents8',
-                        }}
-                     >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed condimentum, nisl ut aliquam lacinia, nisl nisl
-                        aliquet aliquet Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Sed condimentum, nisl ut aliquam
-                        lacinia, nisl nisl aliquet aliquet Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit. Sed condimentum, nisl
-                        ut aliquam lacinia, nisl nisl aliquet aliquet Lorem
-                        ipsum dolor sit amet, aliquam lacinia, nisl nisl aliquet
-                        aliquet
-                     </Text>
-                     <Text
-                        span
-                        css={{
-                           color: '$accents8',
-                        }}
-                     >
-                        elit. Sed condimentum, nisl ut aliquam lacinia, nisl
-                        nisl aliquet aliquet elit. Sed condimentum, nisl ut
-                        aliquam lacinia, nisl nisl aliquet aliquet elit. Sed
-                        condimentum, nisl ut aliquam lacinia, nisl nisl aliquet
-                        aliquet elit. Sed condimentum, nisl ut aliquam lacinia,
-                        nisl nisl aliquet aliquet
+                     1、客服发送今天上班女孩资料
                      </Text>
                   </Flex>
                </Flex>
 
-               <Flex css={{gap: '$5'}} justify={'center'}>
+               <Flex css={{gap: '$5'}} justify={'start'}>
                   <BoxIcon />
                   <Flex direction={'column'} css={{gap: '$3'}}>
                      <Text h3>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit?
-                     </Text>
-                     <Text
-                        span
-                        css={{
-                           color: '$accents8',
-                        }}
-                     >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed condimentum, nisl ut aliquam lacinia, nisl nisl
-                        aliquet aliquet Lorem ipsum dolor sit amet, consectetur
-                        adipiscing adipiscing elit. Sed condimentum, nisl ut
-                        aliquam lacinia, nisl nisl aliquet aliquet Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit. Sed
-                        condimentum, nisl ut aliquam lacinia, nisl nisl aliquet
-                        aliquet
-                     </Text>
-                     <Text
-                        span
-                        css={{
-                           color: '$accents8',
-                        }}
-                     >
-                        elit. Sed condimentum, nisl ut aliquam lacinia, nisl
-                        nisl aliquet aliquet elit. Sed condimentum, nisl ut
-                        aliquam lacinia, nisl nisl aliquet aliquet elit. Sed
-                        condimentum, aliquet
+                     2、选好人后找客服确定时间，确定上门还是去女孩工作室
                      </Text>
                   </Flex>
                </Flex>
 
-               <Flex css={{gap: '$5'}} justify={'center'}>
+               <Flex css={{gap: '$5'}}>
                   <BoxIcon />
                   <Flex direction={'column'} css={{gap: '$3'}}>
                      <Text h3>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit?
+                     3、客人（女孩）准时到约定好的地址
                      </Text>
-                     <Text
-                        span
-                        css={{
-                           color: '$accents8',
-                        }}
-                     >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed condimentum, nisl ut aliquam lacinia, nisl nisl
-                        aliquet
+                  </Flex>
+               </Flex>
+               <Flex css={{gap: '$5'}} justify={'start'}>
+                  <BoxIcon />
+                  <Flex direction={'column'} css={{gap: '$3'}}>
+                     <Text h3>
+                     4、给出房间号去女孩工作室（下楼接女孩到客人开好酒店的房间）
                      </Text>
-                     <Text
-                        span
-                        css={{
-                           color: '$accents8',
-                        }}
-                     >
-                        elit. Sed condimentum, nisl ut aliquam lacinia, nisl
-                        nisl aliquet aliquet elit. Sed condimentum, nisl ut
-                        aliquam lacinia, nisl nisl aliquet aliquet elit. Sed
-                        condimentum, Sed condimentum, nisl ut aliquam lacinia,
-                        nisl nisl aliquet aliquet
+                  </Flex>
+               </Flex>
+               <Flex css={{gap: '$5'}} justify={'start'}>
+                  <BoxIcon />
+                  <Flex direction={'column'} css={{gap: '$3'}}>
+                     <Text h3>
+                     5、见到女孩后觉得满意就付款给她，然后女孩开工
                      </Text>
                   </Flex>
                </Flex>
 
-               <Flex css={{gap: '$5'}} justify={'center'}>
+               <Flex css={{gap: '$5'}} justify={'start'}>
                   <BoxIcon />
                   <Flex direction={'column'} css={{gap: '$3'}}>
                      <Text h3>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit?
-                     </Text>
-                     <Text
-                        span
-                        css={{
-                           color: '$accents8',
-                        }}
-                     >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed condimentum, nisl ut aliquam lacinia, nisl nisl
-                        aliquet aliquet Lorem ipsum dolor sit amet, consectetur
-                        adipiscing
-                     </Text>
-                     <Text
-                        span
-                        css={{
-                           color: '$accents8',
-                        }}
-                     >
-                        elit. Sed condimentum, nisl ut aliquam lacinia, nisl
-                        nisl aliquet aliquet elit. Sed condimentum, nisl ut
-                        aliquam lacinia, nisl nisl aliquet aliquet elit. Sed
-                        condimentum, nisl ut aliquam lacinia, nisl nisl aliquet
-                        aliquet elit. Sed condimentum, nisl ut aliquam lacinia,
-                        nisl nisl aliquet aliquet
+                     6、不满意可换可退
                      </Text>
                   </Flex>
                </Flex>

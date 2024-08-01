@@ -20,11 +20,11 @@ const darkTheme = createTheme({
 function MyApp({Component, pageProps}: AppProps) {
    return (
       <NextThemesProvider
-         defaultTheme="system"
+         defaultTheme="dark"
          attribute="class"
          value={{
+           dark: darkTheme.className,
             light: lightTheme.className,
-            dark: darkTheme.className,
          }}
       >
          <NextUIProvider>

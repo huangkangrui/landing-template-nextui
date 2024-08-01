@@ -56,20 +56,10 @@ export const Hero = () => {
                   size={'$lg'}
                   span
                >
-                  The easiest way to build React Landing page in seconds. Save
-                  time and focus on your project.
+                  全国高端外围模特高端商务外围模特高端伴游
                </Text>
 
-               <Flex
-                  css={{
-                     gap: '$8',
-                     pt: '$4',
-                  }}
-                  wrap={'wrap'}
-               >
-                  <Input placeholder="Enter your email address" size="lg" />
-                  <Button>Start Free Trial</Button>
-               </Flex>
+               
                <Flex
                   wrap={'wrap'}
                   css={{
@@ -86,7 +76,7 @@ export const Hero = () => {
                         alignItems: 'center',
                      }}
                   >
-                     <CheckIcon /> No credit card required.
+                     <CheckIcon /> 高端外围.
                   </Flex>
                   <Flex
                      css={{
@@ -94,7 +84,7 @@ export const Hero = () => {
                         alignItems: 'center',
                      }}
                   >
-                     <CheckIcon /> 14-day free trial.
+                     <CheckIcon /> 中端外围.
                   </Flex>
                   <Flex
                      css={{
@@ -102,7 +92,7 @@ export const Hero = () => {
                         alignItems: 'center',
                      }}
                   >
-                     <CheckIcon /> Cancel anytime.
+                     <CheckIcon /> 国外高端.
                   </Flex>
                </Flex>
             </Box>
