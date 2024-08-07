@@ -14,11 +14,9 @@ import Preview from '@/components/Preview';
 const Home: NextPage = () => {
   return (
     <Box as="main">
-
-
-      <Preview />
       <Hero />
       <Features1 />
+      <Preview />
       <Faq />
     </Box>
 
