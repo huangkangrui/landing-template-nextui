@@ -1,4 +1,4 @@
-import { Button, Dropdown, Link, Navbar, Switch, Text } from '@nextui-org/react';
+import { Button, Dropdown, Navbar, Switch, Text } from '@nextui-org/react';
 import React from 'react';
 import { ModalLogin } from '../modal';
 import { icons } from './icons';
@@ -6,21 +6,25 @@ import { AcmeLogo } from './logo';
 import { useTheme as useNextTheme } from 'next-themes';
 import { useTheme } from '@nextui-org/react';
 import { GithubIcon } from '../icons/GithubIcon';
+import Link from 'next/link';
+import { useSearchParams } from "next/navigation";
+import {Router, useRouter} from "next/router";
 
 export const Nav = () => {
   const { setTheme } = useNextTheme();
   const { isDark, type } = useTheme();
+  const route = useRouter();
+  
   const collapseItems = [
-    '广州外围',
-    '深圳外围',
-    '上海外围',
+   {title: '广州外围', href: '/guangzhou/1'},
+
   ];
   return (
     <Navbar
       isBordered
       css={{
         'overflow': 'hidden',
-        '& .nextui-navbar-container': {
+        '&.nextui-navbar-container': {
           background: '$background',
           borderBottom: 'none',
         },
@@ -28,101 +32,54 @@ export const Nav = () => {
     >
       <Navbar.Brand>
         <Navbar.Toggle aria-label="toggle navigation" showIn="xs" />
-        <AcmeLogo />
+        <Link href='/'>
+          <AcmeLogo />
+        </Link>
         <Text b color="inherit" hideIn="xs">
-          ACME
+          外围工作室
         </Text>
+
         <Navbar.Content
           hideIn="sm"
           css={{
             pl: '6rem',
           }}
         >
-          <Dropdown isBordered>
-            <Navbar.Item>
-              <Dropdown.Button
-                auto
-                light
-                css={{
-                  px: 0,
-                  dflex: 'center',
-                  svg: { pe: 'none' },
-                }}
-                iconRight={icons.chevron}
-                ripple={false}
-              >
-                广州外围
-              </Dropdown.Button>
-            </Navbar.Item>
-            <Dropdown.Menu
-              aria-label="ACME features"
-              css={{
-                '$$dropdownMenuWidth': '340px',
-                '$$dropdownItemHeight': '70px',
-                '& .nextui-dropdown-item': {
-                  'py': '$4',
-                  'svg': {
-                    color: '$secondary',
-                    mr: '$4',
-                  },
-                  '& .nextui-dropdown-item-content': {
-                    w: '100%',
-                    fontWeight: '$semibold',
-                  },
-                },
-              }}
-            >
-              <Dropdown.Item
-                key="广州大圈">
-                广州大圈
-              </Dropdown.Item>
-              <Dropdown.Item
-                key="广州外围">
-                广州外围
-              </Dropdown.Item>
-              <Dropdown.Item
-                key="production_ready">
-                天河
-              </Dropdown.Item>
-              <Dropdown.Item
-                key="越秀">
-                越秀
-              </Dropdown.Item>
-              <Dropdown.Item
-                key="海珠">
-               海珠
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-          <Navbar.Link href="#">
+            <Link href="/" style={{color: route.pathname === '/' ? 'var(--nextui-colors-link)' : 'inherit'}}>首页</Link>
+            <Link href="/guangzhou/1" style={{color: route.route === '/guangzhou/[page]' ? 'var(--nextui-colors-link)' : 'inherit'}}>广州外围</Link>
+          {/* </Navbar.Link> */}
+          {/* <Navbar.Link>
+            <Link href="/guangzhou/1">广州外围</Link>
+          </Navbar.Link> */}
+          {/* <Navbar.Link href="#">
             深圳外围
-          </Navbar.Link>
-          <Navbar.Link href="#">上海外围</Navbar.Link>
+          </Navbar.Link> */}
+          {/* <Navbar.Link href="#">上海外围</Navbar.Link> */}
         </Navbar.Content>
       </Navbar.Brand>
 
       <Navbar.Collapse>
         {collapseItems.map((item, index) => (
-          <Navbar.CollapseItem key={item}>
+          <Navbar.CollapseItem key={index}>
             <Link
               color="inherit"
-              css={{
-                minWidth: '100%',
-              }}
-              href="#"
+              // css={{
+              //   minWidth: '100%',
+              // }}
+              href={item.href}
             >
-              {item}
+              {item.title}
             </Link>
           </Navbar.CollapseItem>
         ))}
         <Navbar.CollapseItem>
           <Link
             color="inherit"
-            css={{
-              minWidth: '100%',
-            }}
+            // css={{
+            //   minWidth: '100%',
+            // }}
             target="_blank"
-            href="https://github.com/Siumauricio/landing-template-nextui"
+            href="/about"
           >
             联系我们
           </Link>
@@ -142,9 +99,9 @@ export const Nav = () => {
         <Navbar.Item hideIn={'xs'}>
           <Link
             color="inherit"
-            css={{
-              minWidth: '100%',
-            }}
+            // css={{
+            //   minWidth: '100%',
+            // }}
             target="_blank"
             href="https://github.com/Siumauricio/landing-template-nextui"
           >
