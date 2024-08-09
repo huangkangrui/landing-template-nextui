@@ -6,7 +6,7 @@ import { Pagination } from "@nextui-org/react";
 import ModelCard from '@/components/ModelCard';
 
 import { useRouter } from "next/router";
-import girls from '@/pages/database/guangzhou';
+import girls from '@/database/guangzhou';
 
 
 
