@@ -13,8 +13,8 @@ interface Props {
 }
 
 const ModelCard = (props: Props) => {
-  return <Link href={`/${props.id}`}>
-    <Card css={{ p: '$6', mw: '500px' }}>
+  return <Card css={{ p: '$6', mw: '500px' }}>
+    <Link href={`/${props.id}`}>
       <Card.Header>
         <Grid.Container css={{ pl: '$6' }}>
           <Grid xs={12}>
@@ -41,8 +41,9 @@ const ModelCard = (props: Props) => {
           alt="全国外围模特"
           src={props.url} />
       </Card.Body>
+      </Link>
     </Card>
-  </Link>
+ 
 }
 
 export default ModelCard
