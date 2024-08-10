@@ -36,7 +36,7 @@ export const Nav = () => {
           <AcmeLogo />
         </Link>
         <Text b color="inherit" hideIn="xs">
-          外围工作室
+          永良工作室
         </Text>
 
         <Navbar.Content

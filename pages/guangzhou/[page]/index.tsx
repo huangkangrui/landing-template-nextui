@@ -14,7 +14,7 @@ import girls from '@/database/guangzhou';
 const Home: NextPage = (props) => {
   const { query, push } = useRouter();
   const page = Number(query.page) || 1;
-  const pageSize = 4;
+  const pageSize = 6;
   const total = girls.length
   const start = (page - 1) * pageSize;
   const end = start + pageSize;

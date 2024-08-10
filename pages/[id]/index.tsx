@@ -1,40 +1,61 @@
+/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next';
 
 import { Box } from '@/components/common/styles/box';
 import { Flex } from '@/components/common/styles/flex';
-import { Pagination } from "@nextui-org/react";
-import ModelCard from '@/components/ModelCard';
+import { Text } from "@nextui-org/react";
+
 
 import { useRouter } from "next/router";
-
-
+import girls from '@/database/guangzhou';
+import Image from 'next/image';
 
 
 
 const Home: NextPage = (props) => {
-  const { query, push } = useRouter();
-  const page = Number(query.page) || 1;
-  const pageSize = 4;
-  // 计算起始索引
-  const start = (page - 1) * pageSize;
-  // 计算结束索引
-  const end = start + pageSize;
-  console.log(Number(query.page));
+  const router = useRouter();
+  const id = router.query.id;
 
+  const girl = girls.find(item => item.id === id);
+  const images = girl?.image || [];
   return (
     <Box as="main">
       <Flex
-        css={{ gap: '2rem', width: '100%', marginTop: '4rem' }}
-        wrap={'wrap'}
+        direction={'column'}
         justify={'center'}
+        align={'center'}
+        css={{
+          pt: '$20',
+        }}
       >
 
+        <Text h3 css={{
+          margin: '0 2rem',
+            
+          }}>{girl?.title}</Text>
+        <Text
+          span
+          css={{
+            maxWidth: '800px',
+            color: '$accents8',
+            textAlign: 'center',
+            margin: '0 2rem',
+          }}
+        >
+          {girl?.description}
+        </Text>
       </Flex>
-      <Flex justify={'center'} css={{ marginRight: '10rem', marginTop: '6rem', width: '100%' }}>
-        <Pagination 
-        total={123} 
-        page={Number(query.page)} 
-        onChange={(number) => push(`/guangzhou/${number}`)} />
+      <Flex
+        css={{ gap: '2rem', marginTop: '4rem' }}
+        wrap={'wrap'}
+        justify={'center'}
+        direction={'column'}
+        align={'center'}
+      >
+        {
+          images.map((url, index) => <img style={{ maxWidth: '80%' }} src={url} alt='' key={url} />)
+        }
+
       </Flex>
     </Box>
 

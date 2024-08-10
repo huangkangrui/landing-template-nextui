@@ -26,7 +26,14 @@ const ModelCard = (props: Props) => {
           </Grid>
           <Grid xs={12}>
             <Tooltip content={props.description}>
-              <Text css={{ color: '$accents8', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }} >
+              <Text css={{
+                color: '$accents8',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                minHeight: 'var(--nextui-lineHeights-lg)',
+                height: 'var(--nextui-lineHeights-lg)',
+                whiteSpace: 'nowrap'
+              }} >
                 {props.description}
               </Text>
             </Tooltip>
@@ -41,9 +48,9 @@ const ModelCard = (props: Props) => {
           alt="全国外围模特"
           src={props.url} />
       </Card.Body>
-      </Link>
-    </Card>
- 
+    </Link>
+  </Card>
+
 }
 
 export default ModelCard
